@@ -1,26 +1,13 @@
-import JobTitle from "./JobTitles";
-import JobContractType from "./JobContractTypes"
-import JobCountry from "./Countries";
-import JobCity from "./Cities";
-
 const Job = (props) => {
-    return (
-        <div className="Job">
-            <div className="Top">
-            <JobTitle title={props.title} />
-            </div>
-
-            <div className="Bottom">
-            <JobContractType contractType={props.contractType} />
-            <JobCountry country={props.country} />
-            <JobCity city={props.city} />
-            </div>
-
-
-           
-            
-        </div>
-    )
+    return <div Job className={`itemJob ${props.className}`}>
+        
+    <h2>{props.title}</h2>
+    <div>
+        <p>{props.contractType}</p>
+        <p>{props.country}</p>
+        <p>{props.city}</p>
+    </div>    
+</div>;
 }
 
 export default Job;
